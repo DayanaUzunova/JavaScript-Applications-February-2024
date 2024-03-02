@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+  <form>
+    <label>
+        Email
+        <input type="text" name="email">
+    </label>
+    <label>
+        <input type="password" name="password">
+    </label>
+
+    <input type="submit" value="sign in">
+  </form>  
+
+  <button id="authorized">Make authorized request</button>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const { email, password } = Object.fromEntries(formData.entries());
+        console.log(email, password);
+
+        const url = "http://localhost:3030/users/login";
+        try{
+            const request = await fetch(url, {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+
+            if(!request.ok){
+                const err = await request.json();
+                throw new Error (`Error: ${err.message}`)
+            }
+            const data = await request.json();
+            
+            localStorage.setItem('user', JSON.stringify(data));
+
+        }catch(err){
+            alert(err.message);
+        }
+    });
+
+    document.getElementById('authorized').addEventListener('click', async () => {
+        const userData = JSON.parse(localStorage.getItem('user'));
+
+        const url = 'http://localhost:3030/users/me';
+
+        try{
+            if(!userData){
+                throw new Error('Please log in!');
+            }
+        const request = await fetch(url, {
+            method: 'get',
+            headers: {
+                'X-Authorization': userData?.accessToken
+            }
+        });
+
+        if(!request.ok){
+            const err = await request.json();
+            throw new Error(err.message);
+        }
+
+        const data = await request.json();
+        console.log(data);
+    }
+    catch(err){
+        alert(err.message);
+    }
+        
+    })
+  </script>
+</body>
+</html>
