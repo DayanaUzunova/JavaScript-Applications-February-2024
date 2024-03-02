@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <form action="http://localhost:3030/jsonstore/phonebook" method="post">
+        <label>
+            <span>Person</span>
+            <input type="text" name="person">
+        </label>
+        <label>
+            <span>Phone</span>
+            <input type="text" name="phone">
+        </label>
+        <input type="submit" value="Send request">
+    </form>
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            console.log('automatic submit prevented');
+
+            const formData = new FormData(form);
+            const { person, phone } = Object.fromEntries(formData.entries());
+            console.log(person, phone);
+            /*
+            const person = document.querySelector('input[name="person"]').value;
+            const phone = document.querySelector('input[name="phone"]').value;
+            console.log(person, phone);
+
+            const url = "http://localhost:3030/jsonstore/phonebook";
+           try{
+            const request = await fetch(url, {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ person, phone })
+            });
+
+           if(request.ok != true){
+                const err = await request.json();
+                throw new Error (err.message);
+           }
+           const response = await request.json();
+           console.log(response);
+        }
+        catch(err){
+            alert(`Error: ${err.message}`);
+        }
+        */
+        });
+    </script>
+</body>
+</html>
