@@ -1,0 +1,27 @@
+#hidden {
+    display: none;
+}
+
+nav {
+    background-color: #333;
+    padding: 8px 16px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px 16px;
+    padding: 8px 16px;
+}
+
+nav a:hover {
+    background-color: #666;
+}
+
+img {
+    height: 300px;
+}
+
+label {
+    display: block;
+}
