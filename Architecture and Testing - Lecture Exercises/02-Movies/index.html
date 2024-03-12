@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="../02-Movies/site.css">
+    <script type="module" src="../02-Movies/src/app.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a id="home-link" href="/">Home</a>
+        <a id="create-link" href="/create.html">Create</a>
+        <a id="login-link" href="/login.html">Login</a>
+    </nav>
+
+    <main></main>
+ 
+    <div id="loading">
+        <span>Loading &hellip;</span>
+    </div>
+
+   <div id="hidden">
+        <section id="home-view">
+            <h1>Welcome to Movies!</h1>
+            <p>Here you can find information about popular titles.</p>
+            <ul id="list">
+    
+            </ul>
+        </section>
+    
+        <section id="login-view">
+            <h1>Log in to Movies</h1>
+            <form id="login-form">
+                <label>
+                    Email:
+                    <input type="text" name="email">
+                </label>
+                <label>
+                    Password:
+                    <input type="password" name="password">
+                </label>
+                <input type="submit" value="Login">
+            </form>
+        </section>
+    
+        <section id="details-view">
+            <h1>Movie Title</h1>
+            <img src="">
+            <p>Movie description</p>
+        </section>
+    
+        <section id="create-view">
+            <h1>Create Movie</h1>
+            <form id="create-form">
+                <label>
+                    Title:
+                    <input type="text" name="title">
+                </label>
+                <label>
+                    Image URL:
+                    <input type="text" name="img">
+                </label>
+                <label>
+                    Description:
+                    <input type="text" name="description">
+                </label>
+                <input type="submit" value="Publish">
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
