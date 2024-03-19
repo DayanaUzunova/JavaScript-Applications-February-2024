@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/catalog">Catalog</a>
+      <a href="/about">About</a>  
+
+    </nav>
+    
+    <main></main>
+    <script>
+        const root = document.querySelector("main");
+        document.querySelector('nav').addEventListener('click', (event) => {
+            if(event.target.tagName == 'A'){
+                event.preventDefault();
+                history.pushState({}, "", event.target.href);
+                updateContent();
+            }
+        });
+
+        window.addEventListener('popstate', updateContent);
+
+        function showHome() {
+            root.innerHTML = `<p>Home page</p>`
+        }
+        function showCatalog(){
+            root.innerHTML = `<p>Catalog page</p>`
+        }
+        function showAbout(){
+            root.innerHTML = `<p>About page</p>`
+        }
+
+        console.log(location.pathname); 
+        updateContent();
+
+        function updateContent(){
+        if(location.pathname == '/'){
+            showHome();
+        } else if(location.pathname == '/catalog'){
+            showCatalog();
+        }
+        else if(location.pathname == '/about'){
+            showAbout();
+        }
+    }
+    </script>
+</body>
+</html>
