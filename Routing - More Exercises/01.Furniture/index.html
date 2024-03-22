@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./static/style.css" />
+    <title>Furniture</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script type="module" src="./src/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/dashboard">Furniture Store</a></h1>
+      <nav>
+        <a id="catalogLink" href="/dashboard">Dashboard</a>
+        <div id="user">
+          <a id="createLink" href="/create">Create Furniture</a>
+          <a id="profileLink" href="/myFurniture">My Publications</a>
+          <a id="logoutBtn" href="/logout">Logout</a>
+        </div>
+        <div id="guest">
+          <a id="loginLink" href="/login">Login</a>
+          <a id="registerLink" href="/register">Register</a>
+        </div>
+      </nav>
+    </header>
+    <div class="container" data-id="root"></div>
+  </body>
+</html>
