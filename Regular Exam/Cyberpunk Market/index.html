@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Cyberpunk Market</title>
+    <script type="module" src="./src/app.js"></script>
+  </head>
+  <body>
+    <!-- BONUS: Notification -->
+    <section id="notifications">
+      <div id="errorBox" class="notification">
+        <span class="msg">MESSAGE</span>
+      </div>
+    </section>
+    <div id="wrapper">
+      <header>
+        <!-- Navigation -->
+        <a id="logo" href="/"
+          ><img id="logo" src="./images/logo.png" alt="img"
+        /></a>
+        <nav>
+          <div>
+            <a href="/dashboard">Market</a>
+          </div>
+
+          <!-- Logged-in users -->
+          <div class="user">
+            <a href="/create">Sell</a>
+            <a href="/logout">Logout</a>
+          </div>
+
+          <!-- Guest users -->
+          <div class="guest">
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="main-element">
+        
+      </main>
+    </div>
+    <footer>
+      <p>SoftUni Exam 2024 &copy;</p>
+    </footer>
+  </body>
+</html>
