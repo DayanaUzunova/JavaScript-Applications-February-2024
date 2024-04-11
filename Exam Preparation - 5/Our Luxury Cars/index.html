@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=\, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <script type="module" src="./src/app.js"></script>
+  <title>Our Luxury Cars</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <!-- Navigation -->
+      <a id="logo" href="home-link"><img id="logo-car" src="./images/car-logo.png" alt="img" /></a>
+      <nav>
+        <div>
+          <a href="dashboard-link">Our Cars</a>
+          <a href="search-link">Search</a>
+        </div>
+
+        <!-- Logged-in users -->
+        <div class="user">
+          <a href="add-link">Add Your Car</a>
+          <a href="logout-link">Logout</a>
+        </div>
+
+        <!-- Guest users -->
+        <div class="guest">
+          <a href="login-link">Login</a>
+          <a href="register-link">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="root">
+      <!-- TODO: Insert said section here, while section#main-element is hidden -->
+    </div>
+
+    <main id="main-element">
+      <!-- Home page -->
+      <section id="hero">
+        <h1>
+          Accelerate Your Passion Unleash the Thrill of Sport Cars Together!
+        </h1>
+      </section>
+
+      <!-- Dashboard page -->
+      <h3 class="heading" id="cars-message">Our Cars</h3>
+      <section id="dashboard">
+        <!-- Display a div with information about every post (if any)-->
+        <div class="car">
+          <img src="./images/pagani.jpg" alt="example1" />
+          <h3 class="model">Pagani Huayra</h3>
+          <div class="specs">
+            <p class="price">Price: €1,010,310</p>
+            <p class="weight">Weight: 1350 kg</p>
+            <p class="top-speed">Top Speed: 360 kph</p>
+          </div>
+          <a class="details-btn" href="details-link">More Info</a>
+        </div>
+        <div class="car">
+          <img src="./images/martin.png" alt="example1" />
+          <h3 class="model">Aston Martin One-77</h3>
+          <div class="specs">
+            <p class="price">Price: €2,960,000</p>
+            <p class="weight">Weight: 1500 kg</p>
+            <p class="top-speed">Top Speed: 355 kph</p>
+          </div>
+          <a class="details-btn" href="#">More Info</a>
+        </div>
+        <div class="car">
+          <img src="./images/ferrari.png" alt="example1" />
+          <h3 class="model">Ferrari LaFerrari</h3>
+          <div class="specs">
+            <p class="price">Price: €3,210,000</p>
+            <p class="weight">Weight: 1600 kg</p>
+            <p class="top-speed">Top Speed: 355 kph</p>
+          </div>
+          <a class="details-btn" href="#">More Info</a>
+        </div>
+      </section>
+      <!-- Display an h2 if there are no posts -->
+      <h3 class="nothing">Nothing to see yet</h3>
+
+      <!-- Register Page (Only for Guest users) -->
+      <section id="register">
+        <div class="form">
+          <h2>Register</h2>
+          <form class="register-form">
+            <input type="text" name="email" id="register-email" placeholder="email" />
+            <input type="password" name="password" id="register-password" placeholder="password" />
+            <input type="password" name="re-password" id="repeat-password" placeholder="repeat password" />
+            <button type="submit">register</button>
+            <p class="message">Already registered? <a href="login-link">Login</a></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Login Page (Only for Guest users) -->
+      <section id="login">
+        <div class="form">
+          <h2>Login</h2>
+          <form class="login-form">
+            <input type="text" name="email" id="email" placeholder="email" />
+            <input type="password" name="password" id="password" placeholder="password" />
+            <button type="submit">login</button>
+            <p class="message">
+              Not registered? <a href="register-link">Create an account</a>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Create Page (Only for logged-in users) -->
+      <section id="create">
+        <div class="form form-auto">
+          <h2>Share Your Car</h2>
+          <form class="create-form">
+            <input type="text" name="model" id="model" placeholder="Model" />
+            <input type="text" name="imageUrl" id="car-image" placeholder="Your Car Image URL" />
+            <input type="text" name="price" id="price" placeholder="Price in Euro" />
+            <input type="number" name="weight" id="weight" placeholder="Weight in Kg" />
+            <input type="text" name="speed" id="speed" placeholder="Top Speed in Kmh" />
+            <textarea id="about" name="about" placeholder="More About The Car" rows="10" cols="50"></textarea>
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      </section>
+      <!-- Edit Page (Only for logged-in users) -->
+      <section id="edit">
+        <div class="form form-auto">
+          <h2>Edit Your Car</h2>
+          <form class="edit-form">
+            <input type="text" name="model" id="model" placeholder="Model" />
+            <input type="text" name="imageUrl" id="car-image" placeholder="Your Car Image URL" />
+            <input type="text" name="price" id="price" placeholder="Price in Euro" />
+            <input type="number" name="weight" id="weight" placeholder="Weight in Kg" />
+            <input type="text" name="speed" id="speed" placeholder="Top Speed in Kmh" />
+            <textarea id="about" name="about" placeholder="More About The Car" rows="10" cols="50"></textarea>
+            <button type="submit">Edit</button>
+          </form>
+        </div>
+      </section>
+      <!-- Details page -->
+
+      <section id="details">
+        <div id="details-wrapper">
+          <img id="details-img" src="./images/pagani.jpg" alt="example1" />
+          <p id="details-title">Pagani Huayra</p>
+          <div id="info-wrapper">
+            <div id="details-description">
+              <p class="price">Price: €1,010,310</p>
+              <p class="weight">Weight: 1350 kg</p>
+              <p class="top-speed">Top Speed: 360 kph</p>
+              <p id="car-description">
+                The Pagani Huayra is a breathtaking hypercar that seamlessly
+                blends art and engineering, representing the epitome of
+                automotive craftsmanship. Its striking exterior features
+                aerodynamic curves and gull-wing doors, showcasing a design
+                that's both futuristic and elegant. Underneath the hood, a
+                meticulously crafted AMG-sourced V12 engine delivers an
+                exhilarating performance, propelling the Huayra to astounding
+                speeds, while the opulent interior envelops the driver in a
+                cocoon of luxury, making every journey a symphony of power and
+                refinement.</p>
+            </div>
+            <!--Edit and Delete are only for creator-->
+            <div id="action-buttons">
+              <a href="edit-link" id="edit-btn">Edit</a>
+              <a href="delete-link" id="delete-btn">Delete</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Search page -->
+      <section id="search">
+        <div class="form">
+          <h4>Search</h4>
+          <form class="search-form">
+            <input type="text" name="search" id="search-input" />
+            <button class="button-list">Search</button>
+          </form>
+        </div>
+        <div class="search-result">
+          <h2 class="no-avaliable">No result.</h2>
+          <!--If there are matches display a div with information about every motorcycle-->
+          <div class="car">
+            <img src="./images/pagani.jpg" alt="example1" />
+            <h3 class="model">Pagani Huayrat</h3>
+            <a class="details-btn" href="details-link">More Info</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
