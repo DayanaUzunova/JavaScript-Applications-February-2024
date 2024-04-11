@@ -1,0 +1,78 @@
+#details-wrapper {
+  background-color: rgb(192, 192, 192);
+  margin: -50px auto;
+  height: 75%;
+  width: 80%;
+  box-shadow: -1px -7px 86px -21px rgba(253, 253, 253, 0.86) inset;
+  -webkit-box-shadow: -1px -7px 86px -21px rgba(255, 255, 255, 0.86) inset;
+  -moz-box-shadow: -1px -7px 86px -21px rgba(255, 255, 255, 0.86) inset;
+  border-bottom-right-radius: 55px;
+  border-top-left-radius: 55px;
+  scale: 0.8;
+  padding-bottom: 10px;
+}
+
+#details-wrapper img {
+  display: block;
+  margin: 10px auto;
+  height: 30vh;
+  width: 50vh;
+  padding-top: 10px;
+  border-radius: 80%;
+
+}
+
+#details-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#details-description {
+  width: 95%;
+  margin: 30px auto;
+  height: auto;
+  text-align: center;
+}
+#details-title {
+  font-size: 22px;
+}
+
+h4 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+}
+
+span {
+  font-size: 22px;
+}
+
+#action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  
+}
+
+#action-buttons a {
+  text-decoration: none;
+  margin: auto 50px;
+  margin-bottom: 10px;
+  font-size: 21px;
+  width: 130px;
+  text-align: center;
+  color: white;
+  background: rgb(214, 16, 16);
+  border-radius: 5px;
+}
+#action-buttons a:hover {
+  background: #ffffff;
+  color: black;
+}
+#nutrition {
+  font-size: 22px;
+}

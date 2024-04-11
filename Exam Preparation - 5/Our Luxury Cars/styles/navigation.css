@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+body {
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  width: 97vw;
+  font-family: 'Roboto Slab', serif;
+ background-image: url('../images/rpm.jpg');
+ background-size: cover;
+background-size: 100vw;
+
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 3em;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+}
+
+nav {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+
+}
+
+#logo-car{
+  width: 120px;
+  
+}
+
+nav a {
+  font-size: 1rem; 
+  background-image: url(../images/car-link.png);
+  display: inline-block;
+ margin: 5px;
+text-decoration: none;
+color: white; /* Set text color */
+width: 150px; /* Set a fixed width */
+height: 50px; /* Set a fixed height */
+background-size: cover; /* Ensure the background image covers the entire space */
+ background-image: url('../images/car-link.png');
+ /* Set background properties */
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ text-align: center;
+ transition: transform 0.7s ease-in-out;
+}
+
+
+nav a:hover {
+  transform: rotate(1deg); /* Apply a slight rotation on hover */
+  animation: shake 2s ease-in-out infinite; /* Apply the shake animation on hover */
+}
+
+@keyframes shake {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  25%, 75% {
+      transform: translateX(-5px);
+  }
+  50% {
+      transform: translateX(5px);
+  }
+}
+
+#hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #e0ecf1;
+  color: rgb(240, 0, 0);
+  font-weight: bolder;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+footer p {
+  margin-top:-1px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    background-image: url('../images/rpm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+}
+
+
+#hero h1 {
+  margin-top: 80px;
+  font-style: italic;
+  font-size: 56px;
+  font-weight: 100;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+  width: 30vw;
+  border-radius: 11px;
+  margin-left: 800px;
+}
+
+#hero h1
+{
+  background-image: url(../images/smoke.png);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 260% auto;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rotate 10s linear infinite;
+  display: inline-block;
+}
+
+@keyframes rotate {
+  to {
+    background-position: 90% center;
+  }
+}

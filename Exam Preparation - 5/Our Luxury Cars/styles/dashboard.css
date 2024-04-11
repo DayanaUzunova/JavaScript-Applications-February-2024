@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#dashboard {
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  flex-wrap: wrap;
+  margin-top: -60px;
+}
+
+
+
+ h2 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(240, 0, 0);
+border-radius: 12px;
+margin-top: -10px;
+background-color: black;
+}
+
+.car {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 28vw;
+  height: 63vh;
+  padding-bottom: 1rem;
+  margin: 20px auto;
+  background-color: rgb(255, 255, 255);
+  border-bottom-right-radius: 55px;
+  border-top-left-radius: 55px;
+  box-shadow: -1px -7px 86px -21px rgba(82,81,81,0.86) inset;
+  -webkit-box-shadow: -1px -7px 86px -21px rgba(82,81,81,0.86) inset;
+  -moz-box-shadow: -1px -7px 86px -21px rgba(82,81,81,0.86) inset;
+ 
+}
+
+.nothing{
+  color: red;
+  margin-top: 100px;
+  font-size: 45px;
+  background-color: rgba(0, 0, 0, 0.856);
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+.car img {
+  width: 20vw;
+  height:13vw; 
+  border-radius: 3px;
+  border: 1px solid black;
+  margin-top: 10px;
+
+}
+
+.car .title {
+  margin: 0;
+  letter-spacing: 2px;
+  color: rgb(95, 94, 94);
+  text-decoration: underline;
+}
+
+.details-btn {
+  margin-top: 4px;
+  text-decoration: none;
+  font-size: 21px;
+  width: 160px;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  background: rgb(106, 14, 14);
+}
+.details-btn:hover {
+  background: #e8e0e0;
+  color: black;
+  border: 1px solid black;
+}
+.specs {
+  border: 1px solid black;
+  padding: 0px 40px;
+  border-radius: 5px;
+}
+.specs p {
+  border-bottom: 1px dashed black;
+}
+
+.heading {
+  color: white;
+text-align: center;
+font-size: 36px;
+}
